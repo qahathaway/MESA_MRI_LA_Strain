@@ -1,20 +1,20 @@
-# CardioOncology
+# Association between pericardial fat and left atrial strain assessed by cardiac MRI in MESA
+
 ## Background:
-Breast cancer chemotherapy/immunotherapy can be associated with treatment-limiting cardiotoxicity. Radiomics techniques applied to ultrasound, known as ultrasomics, can be used in cardio-oncology to leverage echocardiography for added prognostic value.
+The earliest manifestations of diastolic dysfunction are typically evident in altered left atrial dynamics or pulmonary inflow patterns, which could be a good target for early diastolic dysfunction detection. Left atrial functional and volumetric changes are amongst the first imaging changes seen in Obesity and type 2 diabetes, and therefore may be a useful marker of early disease
 
 ## Objectives:
-To utilize ultrasomics features collected prior to antineoplastic therapy to enhance prediction of mortality and heart failure (HF) in patients with breast cancer.
+We hypothesize that pericardial fat correlates with MRI-derived atrial strain measurements
 
 ## Methods:
-Patients were prospectively recruited to the study through the West Virginia University Cancer Institute. 134 of 455 identified patients met the inclusion criteria. Patients were imaged using echocardiography in the parasternal long-axis prior to receiving chemotherapy. All-cause mortality and HF, developed during treatment, were the primary outcomes. 268 features were assessed, grouped into four major classes: demographics (n=20), heart function (n=7), antineoplastic medication (n=17), and ultrasomics (n=224).
-
-## Results:
-Examining all features, mortality (n=40) and HF (n=18) revealed a significant association. Of these, 39/40 mortality and 14/18 HF features belonged to ultrasomics. There was an equal distribution of ultrasomics features coming from the interventricular septum (IVS) and posterior wall (PW) with most of these features derived from end-diastole. When developing a risk prediction score for each feature category, ultrasomics features were significantly associated with both mortality (P=0.019, log-rank test) and HF (P<0.0001, log-rank test). Further, only ultrasomics features provided significant improvement over demographic variables when predicting HF (C-Index: 0.93 [0.88-0.98]).
-
-## Conclusions:
-With further investigation, a clinical decision support tool could be developed utilizing routinely obtained patient data alongside ultrasomics variables to augment treatment regimens.
+Patients with MRI for left atrial strain (n=2884) in the Multi-Ethnic Study of Atherosclerosis (MESA) were examined. Measurements at Exam 1-4 were collected to evaluate associations with left atrial strain (Exam 5).
 
 ![alt text](https://github.com/qahathaway/MESA_MRI_LA_Strain/blob/main/Figure_1.jpg)
 
 ## Figure 1:
-Study overview. (A) 134 patients met the inclusion criteria. Echocardiography was performed prior to antineoplastic therapy initiation. Following therapy, the two primary outcomes were measured: all-cause mortality and heart failure. (B) Echocardiographic images were selected in the end-diastolic and end-systolic phase for each patient. Using LifeX software, the interventricular septum and posterior wall were manually traced. This resulted in four unique segments for each patient: IVS-ED, IVS-ES, PW-ED, and PW-ES. Radiomics features were extracted using LifeX software, resulting in the collection of first and second order features and textural-based features. NGLDM = Neighboring Gray-Level Dependence Matrix, GLCM = Gray-Level Co-ccurrence Matrix, GLZLM = Gray-Level Zone Length Matrix, GLRLM = Gray-Level Run Length Matrix.
+Methodological overview of assessing the relationship between volume of pericardial fat and left atrial strain. Baseline variables for Models 1-3 were collected at Exam 1. Potentially confounding variables, including body mass index (BMI), low-density lipoprotein (LDL), high-density lipoprotein (HDL), total cholesterol, triglycerides, and volume of pericardial fat, were further assessed at a follow-up visit. The follow-up visit selected was the visit with the most recent volume of pericardial fat measurement. Analyses in the study were ultimately conducted on those patients (n=2884) who received MRI for left atrial strain. Evaluation metrics included linear regression, multiple linear regression, and machine learning through random forest regression. CKD-EPI GRF = Chronic Kidney Disease Epidemiology Collaboration Equation for GFR, CAC Score = Mean: Agatston Calcium Score, Phantom-Adjusted.
+
+![alt text](https://github.com/qahathaway/MESA_MRI_LA_Strain/blob/main/Figure_2.jpg)
+
+## Figure 2:
+Figure 2: Linear regression for each of the left atrial strain measurements as compared to (A) volume of pericardial on Exam 1 and on the (B) Proximal Exam. Left atrial strain measurements were normalized using base R. The shaded area represents the 95% CI. Exam 1 is the first MESA exam. Proximal Exam refers to the exam closest to Exam 5 in which volume of pericardial fat was measured. LAVMAX = Left Atrial Maximum Volume by MTT (mL), LAVPREA = Left Atrial Pre-atrial Contraction Volume by MTT (mL), LAVMIN = Left Atrial Minimum Volume by MTT (mL), LASMAX = Left Atrial Peak Longitudinal Strain by MTT (%), LASRMAX = Left Atrial Peak Positive Longitudinal Strain Rate by MTT (%/ms), LASRE = Left Atrial Peak Early-diastolic Longitudinal Strain Rate by MTT (%/ms), LASRA = Left Atrial Peak Atrial-diastolic Longitudinal Strain Rate by MTT (%/ms), LAVOLCIRCLE = Left Atrial Maximum Volume by CIRCLE (mL), LATEF = Left Atrial Total Ejection Fraction (%), LAPEF = Left Atrial Passive Ejection Fraction (%), LAAEF = Left Atrial Active Ejection Fraction (%).
